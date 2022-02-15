@@ -1,0 +1,22 @@
+{
+  "name": "express_calculator",
+  "version": "1.0.0",
+  "description": "This is a simple calculator app that uses express",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/NPitroff/Express_Calculator.git"
+  },
+  "author": "Nicolai Pitroff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NPitroff/Express_Calculator/issues"
+  },
+  "homepage": "https://github.com/NPitroff/Express_Calculator#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
