@@ -20,6 +20,11 @@ app.post("/", function(req, res){
   var result = num1+num2;
   res.send("Your total is "+result);
 })
+///////////////get & post requests for bmiCalculator.html/////////
+// bmiCalculator homepage
+app.get("/", function(req, res){
+  res.sendFile(__dirname + "/bmiCalculator.html");
+})
 
 // port setup
 app.listen(3000, function(){
