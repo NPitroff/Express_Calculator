@@ -10,16 +10,16 @@ app.get("/", function(req, res){
 })
 
 // post method
-app.post("/", function(req, res){
-  // parsed version of the request
-  // console.log(req.body.num1);
-  // var to hold the numbers in the input field
-  var num1 = Number(req.body.num1);
-  var num2 = Number(req.body.num2);
-  // var to add the results
-  var result = num1+num2;
-  res.send("Your total is "+result);
-})
+// app.post("/", function(req, res){
+//   // parsed version of the request
+//   // console.log(req.body.num1);
+//   // var to hold the numbers in the input field
+//   var num1 = Number(req.body.num1);
+//   var num2 = Number(req.body.num2);
+//   // var to add the results
+//   var result = num1+num2;
+//   res.send("Your total is "+result);
+// })
 ///////////////get & post requests for bmiCalculator.html/////////
 // bmiCalculator homepage
 app.get("/bmiCalculator", function(req, res){
@@ -28,8 +28,9 @@ app.get("/bmiCalculator", function(req, res){
 })
 //post to calculate bmi
 app.post("/",function(req,res){
+  console.log(req.body);
   var weight = Number(req.body.weight);
-  var height = Math.pow(Number(req.body.height),2);
+  var height = Number(req.body.height) ** 2;
   var bmi = weight / height;
   res.send("Your BMI is "+bmi);
 })
