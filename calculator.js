@@ -25,7 +25,13 @@ app.post("/", function(req, res){
 app.get("/", function(req, res){
   res.sendFile(__dirname + "/bmiCalculator.html");
 })
-
+//post to calculate bmi
+app.post("/",function(req,res){
+  var weight = Number(req.body.weight);
+  var height = Math.pow(Number(req.body.height),2);
+  var bmi = weight / height;
+  res.send("Your BMI is "+bmi);
+})
 // port setup
 app.listen(3000, function(){
   console.log("Port 3000")
