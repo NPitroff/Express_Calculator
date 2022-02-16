@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/NPitroff/Express_Calculator#readme",
   "dependencies": {
+    "body-parser": "^1.19.2",
     "express": "^4.17.2"
   }
 }
