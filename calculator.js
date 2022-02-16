@@ -22,8 +22,9 @@ app.post("/", function(req, res){
 })
 ///////////////get & post requests for bmiCalculator.html/////////
 // bmiCalculator homepage
-app.get("/", function(req, res){
+app.get("/bmiCalculator", function(req, res){
   res.sendFile(__dirname + "/bmiCalculator.html");
+  // res.send("<h1>BMI Calculator</h1>");
 })
 //post to calculate bmi
 app.post("/",function(req,res){
