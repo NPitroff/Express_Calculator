@@ -9,28 +9,28 @@ app.get("/", function(req, res){
   res.sendFile(__dirname + "/index.html");
 })
 
-// post method
-// app.post("/", function(req, res){
-//   // parsed version of the request
-//   // console.log(req.body.num1);
-//   // var to hold the numbers in the input field
-//   var num1 = Number(req.body.num1);
-//   var num2 = Number(req.body.num2);
-//   // var to add the results
-//   var result = num1+num2;
-//   res.send("Your total is "+result);
-// })
+// post method for index.html
+app.post("/", function(req, res){
+  // parsed version of the request
+  // console.log(req.body.num1);
+  // var to hold the numbers in the input field
+  var num1 = Number(req.body.num1);
+  var num2 = Number(req.body.num2);
+  // var to add the results
+  var result = num1+num2;
+  res.send("Your total is "+result);
+})
 ///////////////get & post requests for bmiCalculator.html/////////
 // bmiCalculator homepage
 app.get("/bmiCalculator", function(req, res){
   res.sendFile(__dirname + "/bmiCalculator.html");
-  // res.send("<h1>BMI Calculator</h1>");
+
 })
 //post to calculate bmi
-app.post("/",function(req,res){
+app.post("/bmiCalculator",function(req,res){
   console.log(req.body);
-  var weight = Number(req.body.weight);
-  var height = Number(req.body.height) ** 2;
+  var weight = parseFloat(req.body.weight);
+  var height = parseFloat(req.body.height) ** 2;
   var bmi = weight / height;
   res.send("Your BMI is "+bmi);
 })
